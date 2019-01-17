@@ -1,4 +1,7 @@
-class Animal {
+import 'Walk.dart';
+import 'Swim.dart';
+
+class Animal with Walk, Swim {
   int age;
   String _name;
 
@@ -10,6 +13,11 @@ class Animal {
 
   void printName() {
     print('The name is $_name');
+  }
+
+  @override
+  walk() {
+    print('Animal walk !!! ');
   }
 }
 
